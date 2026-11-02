@@ -1,41 +1,84 @@
+<div align="center">
+
 # CEA-IR
 
-**Continuous Expert Assembly for All-in-One Image Restoration**
+### Continuous Expert Assembly<br>Instance-Conditioned Low-Rank Residuals for All-in-One Image Restoration
 
-### Instance-Conditioned Low-Rank Residuals for All-in-One Image Restoration
+<p>
+  Haisen He<sup>1</sup> &nbsp;·&nbsp;
+  Xiangyu Zou<sup>2</sup> &nbsp;·&nbsp;
+  SongLin Dong<sup>3</sup> &nbsp;·&nbsp;
+  Heng Li<sup>3</sup> &nbsp;·&nbsp;
+  Yihong Gong<sup>4</sup> &nbsp;·&nbsp;
+  Zhiheng Ma<sup>3,*</sup>
+</p>
 
-**Coming soon.** Code, pretrained models, and reproduction instructions are being prepared for public release.
+<p>
+  <sup>1</sup>Southern University of Science and Technology<br>
+  <sup>2</sup>Shenzhen University &nbsp;·&nbsp;
+  <sup>3</sup>Shenzhen University of Advanced Technology<br>
+  <sup>4</sup>Xi'an Jiaotong University<br>
+  <sub>* Corresponding author</sub>
+</p>
 
-This repository is being prepared to host the implementation of:
+<p>
+  <a href="https://arxiv.org/abs/2605.06127"><img src="https://img.shields.io/badge/arXiv-2605.06127-B31B1B?style=flat-square" alt="arXiv: 2605.06127"></a>
+  <a href="https://arxiv.org/pdf/2605.06127"><img src="https://img.shields.io/badge/Paper-PDF-2563EB?style=flat-square" alt="Read the paper PDF"></a>
+  <a href="#release-status"><img src="https://img.shields.io/badge/Code-Coming%20soon-D97706?style=flat-square" alt="Code: coming soon"></a>
+</p>
 
-> **Continuous Expert Assembly: Instance-Conditioned Low-Rank Residuals for All-in-One Image Restoration**
-> Haisen He, Xiangyu Zou, SongLin Dong, Heng Li, Yihong Gong, and Zhiheng Ma
+**Image-conditioned components. Token-dependent restoration.**
+
+[Overview](#overview) · [Release status](#release-status) · [Citation](#citation)
+
+</div>
+
+---
+
+> [!NOTE]
+> **Coming soon.** We are preparing the code, pretrained models, and reproduction instructions for release. This repository currently serves as the project landing page.
 
 ## Overview
 
-Continuous Expert Assembly (CEA) is an instance-conditioned low-rank parameterization framework for all-in-one image restoration. It is designed to handle unknown, spatially varying, and compositional image degradations without requiring degradation labels at inference time.
+**Continuous Expert Assembly (CEA)** adapts a shared image restoration backbone to unknown, spatially varying, and compositional degradations, without requiring degradation labels at inference time.
 
-A lightweight **Cross-Attention Hyper-Adapter** probes intermediate spatial features to generate low-rank routing bases and residual directions. These factors are shared across spatial tokens within each layer and target projection, while token features produce dense signed coefficients and token-dependent residual responses.
+A lightweight **Cross-Attention Hyper-Adapter** probes intermediate spatial features and generates low-rank routing bases and residual directions. Each spatial token combines these image-conditioned components through dense signed coefficients to produce its own residual response.
 
-The accompanying work studies CEA on **AIO-3**, **AIO-5**, **CDD-11**, and real-captured adverse-weather images from **WeatherBench**.
+| Component | Role |
+| :--- | :--- |
+| **Spatial probing** | Learnable queries extract degradation-relevant information from intermediate features. |
+| **Dynamic low-rank factors** | Compact routing bases and residual directions are generated for each input. |
+| **Continuous assembly** | Spatial tokens combine the generated components through dense signed affinities. |
+
+The work evaluates restoration on **AIO-3**, **AIO-5**, and **CDD-11**, with additional evaluation on real-captured **WeatherBench** images in the accompanying manuscript.
 
 ## Release status
 
-This repository currently contains release information only. The implementation, model weights, and runnable examples are not yet available here.
+| Resource | Status |
+| :--- | :--- |
+| Paper | [Available on arXiv](https://arxiv.org/abs/2605.06127) |
+| Model implementation | Coming soon |
+| Pretrained checkpoints | Coming soon |
+| Training and evaluation configurations | Coming soon |
+| Setup, dataset preparation, and inference guides | Coming soon |
 
-Planned release contents:
+## Citation
 
-- [ ] CEA model implementation
-- [ ] Environment setup and dependency instructions
-- [ ] Dataset preparation guides
-- [ ] Training and evaluation configurations
-- [ ] Pretrained model checkpoints
-- [ ] Inference examples and reproducibility instructions
+If you find this work useful in your research, please consider citing our paper:
 
-## Paper and citation
-
-The public paper link and citation details will be added when available.
+```bibtex
+@misc{he2026continuousexpertassembly,
+  title         = {Continuous Expert Assembly: Instance-Conditioned Low-Rank Residuals for All-in-One Image Restoration},
+  author        = {Haisen He and Xiangyu Zou and SongLin Dong and Heng Li and Yihong Gong and Zhiheng Ma},
+  year          = {2026},
+  eprint        = {2605.06127},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  doi           = {10.48550/arXiv.2605.06127},
+  url           = {https://arxiv.org/abs/2605.06127}
+}
+```
 
 ## License
 
-A license will be specified with the public release. No license for the forthcoming code or model weights is granted by this placeholder repository.
+License information for the code and model weights will accompany the public release.
