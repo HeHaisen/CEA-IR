@@ -40,6 +40,7 @@
 
 ## Overview
 
+<!-- Source: sub/figs/fig2v3.png in the author-provided paper sources. Original resolution; composited on white for dark-mode readability. -->
 <p align="center">
   <a href="assets/architecture.png">
     <img src="assets/architecture.png" width="100%" alt="CEA architecture: a U-shaped restoration backbone, a Cross-Attention Hyper-Adapter generating routing bases and residual directions, and token-dependent continuous expert assembly.">
