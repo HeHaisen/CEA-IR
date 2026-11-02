@@ -36,9 +36,18 @@
 ---
 
 > [!NOTE]
-> **Coming soon.** We are preparing the code, pretrained models, and reproduction instructions for release. This repository currently serves as the project landing page.
+> **Coming soon.** We are preparing the code, model checkpoints, and reproduction instructions for release. This repository currently serves as the project landing page.
 
 ## Overview
+
+<p align="center">
+  <a href="assets/architecture.png">
+    <img src="assets/architecture.png" width="100%" alt="CEA architecture: a U-shaped restoration backbone, a Cross-Attention Hyper-Adapter generating routing bases and residual directions, and token-dependent continuous expert assembly.">
+  </a>
+</p>
+<p align="center">
+  <sub><b>Figure 2.</b> CEA combines a restoration backbone with a Cross-Attention Hyper-Adapter and continuous low-rank residual assembly. Click the figure to view it at full resolution.</sub>
+</p>
 
 **Continuous Expert Assembly (CEA)** adapts a shared image restoration backbone to unknown, spatially varying, and compositional degradations, without requiring degradation labels at inference time.
 
@@ -58,7 +67,7 @@ The work evaluates restoration on **AIO-3**, **AIO-5**, and **CDD-11**, with add
 | :--- | :--- |
 | Paper | [Available on arXiv](https://arxiv.org/abs/2605.06127) |
 | Model implementation | Coming soon |
-| Pretrained checkpoints | Coming soon |
+| Model checkpoints | Coming soon |
 | Training and evaluation configurations | Coming soon |
 | Setup, dataset preparation, and inference guides | Coming soon |
 
