@@ -1,0 +1,25 @@
+# Local settings and credentials
+.env
+.env.*
+!.env.example
+.DS_Store
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Datasets, weights, and generated experiment artifacts
+datasets/
+checkpoints/
+ckpts/
+output/
+outputs/
+runs/
+wandb/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
